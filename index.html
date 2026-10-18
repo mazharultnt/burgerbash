@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BurgerBash | Big burgers, fair prices</title>
+  <meta name="description" content="BurgerBash is a practice landing page for a burger restaurant. Menu, offers and a table booking form.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Burger<span>Bash</span></a>
+      <button class="menu-button" id="menu-button" aria-expanded="false" aria-label="Open menu">Menu</button>
+      <nav class="main-nav" id="main-nav">
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#story">Our story</a>
+        <a href="#visit">Visit us</a>
+        <a href="#book" class="nav-button">Book a table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Fresh. Hot. Stacked high.</p>
+          <h1>Big burgers for big appetites.</h1>
+          <p class="lead">Beef patties pressed fresh every morning, soft toasted buns and sauces we make ourselves.</p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn">See the menu</a>
+            <a href="#book" class="btn btn-outline">Book a table</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-burger.jpg" alt="A tall burger with cheese and salad" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2 class="section-title">Our menu</h2>
+        <p class="section-intro">Pick a group to see what we serve.</p>
+
+        <div class="tabs" id="menu-tabs"></div>
+        <div class="menu-grid" id="menu-grid"></div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="section section-dark" id="offers">
+      <div class="container">
+        <h2 class="section-title">This week's offers</h2>
+        <div class="offer-grid">
+          <div class="offer">
+            <p class="offer-tag">Every Tuesday</p>
+            <h3>Two for one</h3>
+            <p>Buy any Classic Burger and get a second one free. Dine in only.</p>
+          </div>
+          <div class="offer">
+            <p class="offer-tag">Weekdays 3 to 6 pm</p>
+            <h3>Fries and drink combo</h3>
+            <p>Add fries and a cold drink to any burger and save 20%.</p>
+          </div>
+          <div class="offer">
+            <p class="offer-tag">Students</p>
+            <h3>Show your ID</h3>
+            <p>Students get 10% off every order, any day of the week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section" id="story">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="images/our-kitchen.jpg" alt="The BurgerBash kitchen" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h2 class="section-title">Our story</h2>
+          <p>BurgerBash started with one idea: a burger should be big, hot and made from good ingredients. No tricks, no long list of extras.</p>
+          <p>Our beef is minced and shaped in the kitchen every morning. Our buns are toasted on the grill, and our sauces are mixed by hand in small batches.</p>
+          <ul class="points">
+            <li>Fresh beef, never frozen</li>
+            <li>Vegetables delivered every day</li>
+            <li>Vegetarian and chicken options</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section section-light" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <h2 class="section-title">Visit us</h2>
+          <p><strong>Address:</strong> 12 Market Road, Gazipur, Bangladesh</p>
+          <p><strong>Phone:</strong> +880 1700 000000</p>
+          <h3>Opening hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr><td>Sunday to Thursday</td><td>11:00 am to 11:00 pm</td></tr>
+              <tr><td>Friday</td><td>2:00 pm to 11:30 pm</td></tr>
+              <tr><td>Saturday</td><td>11:00 am to 11:30 pm</td></tr>
+            </tbody>
+          </table>
+          <p class="small-text">This is a made-up restaurant. The address and phone number are samples.</p>
+        </div>
+
+        <div id="book">
+          <h2 class="section-title">Book a table</h2>
+          <form id="book-form" novalidate>
+            <div class="form-message" id="book-success" hidden></div>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" autocomplete="name">
+              <p class="field-error" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" autocomplete="tel">
+              <p class="field-error" id="phone-error"></p>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="date">Date</label>
+                <input type="date" id="date">
+                <p class="field-error" id="date-error"></p>
+              </div>
+              <div class="field">
+                <label for="guests">Guests</label>
+                <select id="guests">
+                  <option value="1">1 person</option>
+                  <option value="2" selected>2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5">5 people</option>
+                  <option value="6">6 people</option>
+                </select>
+                <p class="field-error"></p>
+              </div>
+            </div>
+            <button type="submit" class="btn">Book now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> BurgerBash. A practice project built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
