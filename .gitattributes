@@ -1,0 +1,7 @@
+# Prioritize JavaScript and React in repository statistics
+*.js linguist-detectable=true
+*.jsx linguist-detectable=true
+
+# Exclude CSS and HTML from language statistics
+*.css linguist-detectable=false
+*.html linguist-detectable=false
